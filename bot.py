@@ -93,7 +93,7 @@ def process_task_title(message):
 
 def process_task_description(message, task):
     task['description'] = message.text
-    msg = bot.send_message(message.chat.id, "Введите цену (в рублях):")
+    msg = bot.send_message(message.chat.id, "Введите цену:")
     bot.register_next_step_handler(msg, process_task_price, task)
 
 
